@@ -1,5 +1,7 @@
 import React from "react";
 import "./SingleCurrencyComponent.css";
+import NorthIcon from "@mui/icons-material/North";
+import SouthIcon from "@mui/icons-material/South";
 
 function SingleCurrencyComponent({
   image,
@@ -10,14 +12,20 @@ function SingleCurrencyComponent({
   low,
   change,
 }) {
+  function decimalPlaces(number) {
+    return (+number).toFixed(20).replace(/^-?\d*\.?|0+$/g, "").length;
+  }
+
   const change_ = (change) => {
     return change > 0
       ? (change = `+${change.toFixed(3)}`)
       : change.toFixed(3);
   };
+
   const giveColor = (data) => {
-    return data < 0 ? "red" : "green";
+    return data < 0 ? "var(--red)" : "var(--green)";
   };
+
   return (
     <div className="wrapper">
       <div className="component">
@@ -36,14 +44,22 @@ function SingleCurrencyComponent({
           </div>
         </div>
         <div className="coin_data">
-          <p className="coin_high">${high}</p>
-          <p className="coin_low">${low}</p>
-          <p
-            className="coin_change"
-            style={{ color: giveColor(change) }}
-          >
-            {change_(change)}%
+          <p className="coin_high">
+            ${high}
+            <NorthIcon style={{ fontSize: "11px" }} />
           </p>
+          <p className="coin_low">
+            ${low}
+            <SouthIcon style={{ fontSize: "11px" }} />
+          </p>
+          <div className="change">
+            <p
+              className="coin_change"
+              style={{ color: giveColor(change) }}
+            >
+              {change_(change)}%
+            </p>
+          </div>
         </div>
       </div>
       <hr />

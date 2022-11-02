@@ -1,6 +1,6 @@
 :root {
   --bg-col: #0f0e11;
-  --red: #6a161a;
+  --red: #681014;
   --green: #347b37;
 }
 @font-face {
@@ -28,6 +28,7 @@
   position: relative;
   padding-top: 1px;
   width: 100vw;
+  min-height: 100vh;
   background-color: var(--bg-col);
 }
 .search_component {

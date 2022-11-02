@@ -26,7 +26,6 @@
   font-family: "Kanit";
   font-size: 1.125rem;
   display: flex;
-  flex-grow: 1;
   width: 100%;
   align-items: center;
   margin-bottom: 10px;
@@ -42,10 +41,9 @@
   position: relative;
   border: 1px solid red;
   align-items: center;
-  flex: 0.5;
+  flex: 0.48;
   justify-content: space-between;
   display: flex;
-  flex-grow: 1;
   gap: 0.5rem;
 }
 .img_name {
@@ -56,42 +54,52 @@
   gap: 0.5rem;
 }
 .img_name > img {
+  border: 1px solid gray;
   object-fit: contain;
   width: 35px;
 }
 .img_name > h1 {
+  border: 1px solid gray;
   font-size: 1.5rem;
 }
 .coin_symbol {
   border: 1px solid green;
 }
 .price {
+  border: 1px solid brown;
   width: 20%;
-  min-width: 100px;
+  min-width: 80px;
 }
 .coin_price {
+  border: 1px solid yellow;
   float: right;
 }
 .coin_high {
+  border: 1px solid blue;
   width: 20%;
   min-width: 100px;
+  align-items: center;
 }
 .coin_low {
-  width: 20%;
-  min-width: 100px;
 }
 .coin_change {
-  width: 20%;
-  min-width: 100px;
 }
 .coin_data {
-  flex: 0.5;
+  flex: 0.48;
+  position: relative;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  flex-grow: 1;
   border: 1px solid aqua;
+  gap: 0.5rem;
+}
+.change {
+  width: 20%;
+  min-width: 70px;
+  border: 2px solid pink;
 }
 .coin_change {
+  border: 2px solid violet;
   float: right;
 }
 @media only screen and (max-width: 930px) {

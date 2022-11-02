@@ -17,9 +17,11 @@ function App() {
       .catch((err) => console.log(err));
     console.log(coins);
   }, []);
+
   const queryCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(query.toLowerCase())
   );
+
   return (
     <div className="app">
       <div className="search_component">
@@ -39,19 +41,21 @@ function App() {
         </form>
       </div>
       <div className="results_component">
-        {queryCoins.map((coin) => {
-          return (
-            <SingleCurrencyComponent
-              key={coin.id}
-              image={coin.image}
-              name={coin.name}
-              symbol={coin.symbol}
-              price={coin.current_price}
-              high={coin.high_24h}
-              low={coin.low_24h}
-              change={coin.price_change_percentage_24h}
-            />
-          );
+        {queryCoins.map((coin, index) => {
+          if (index > 10) return;
+          else
+            return (
+              <SingleCurrencyComponent
+                key={coin.id}
+                image={coin.image}
+                name={coin.name}
+                symbol={coin.symbol}
+                price={coin.current_price}
+                high={coin.high_24h}
+                low={coin.low_24h}
+                change={coin.price_change_percentage_24h}
+              />
+            );
         })}
       </div>
     </div>
