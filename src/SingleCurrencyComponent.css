@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Kanit";
+  src: url("./assets/Kanit-Medium.woff2") format("woff2"),
+    url("./assets/Kanit-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KanitLight";
+  src: url("./assets/Kanit-Thin.woff2") format("woff2"),
+    url("./assets/Kanit-Thin.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+.component {
+  font-family: "Kanit";
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.component > hr {
+  width: 100%;
+}
+.coin_basic_info {
+  display: flex;
+}
+.coin_data {
+  display: flex;
+}

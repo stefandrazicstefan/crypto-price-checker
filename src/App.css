@@ -1,13 +1,97 @@
+:root {
+  --bg-col: #0f0e11;
+  --red: #6a161a;
+  --green: #347b37;
+}
 @font-face {
-  font-family: "eros";
-  src: url("./assets/eros-Oblique.woff2") format("woff2"),
-    url("./assets/eros-Oblique.woff") format("woff");
-  font-weight: normal;
+  font-family: "Kanit";
+  src: url("./assets/Kanit-Medium.woff2") format("woff2"),
+    url("./assets/Kanit-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "KanitLight";
+  src: url("./assets/Kanit-Thin.woff2") format("woff2"),
+    url("./assets/Kanit-Thin.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 .app {
+  position: relative;
+  padding-top: 1px;
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: var(--bg-col);
+}
+.search_component {
+  margin: auto;
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (max-width: 530px) {
+  .search_component {
+    margin-top: 10vw;
+  }
+}
+.search_component > span {
+  color: white;
+  font-family: "Kanit";
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.search_component > form > input {
+  border: none;
+  border-radius: 3px;
+  padding-left: 15px;
+  font-family: "KanitLight";
+  font-weight: 300;
+  margin-top: 25px;
+  width: 280px;
+  height: 35px;
+  outline: none;
+  background-image: linear-gradient(
+    -200deg,
+    #3d5ac3 0%,
+    #165fc4 50%,
+    #044cc1 100%
+  );
+}
+@media only screen and (max-width: 420px) {
+  .search_component > span {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .search_component > form > input {
+    width: 240px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .search_component > span {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .search_component > form > input {
+    width: 210px;
+  }
+}
+.results_component {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
 }
