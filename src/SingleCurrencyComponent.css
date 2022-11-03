@@ -15,7 +15,6 @@
   font-display: swap;
 }
 .wrapper {
-  border: 4px solid black;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -39,7 +38,6 @@
 /* coin_basic_info -- first half of the component */
 .coin_basic_info {
   position: relative;
-  border: 1px solid red;
   align-items: center;
   flex: 0.48;
   justify-content: space-between;
@@ -50,33 +48,27 @@
   min-width: 160px;
   display: flex;
   align-items: center;
-  border: 1px solid blue;
   gap: 0.5rem;
 }
 .img_name > img {
-  border: 1px solid gray;
   object-fit: contain;
   width: 35px;
 }
 .img_name > h1 {
-  border: 1px solid gray;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 .coin_symbol {
-  border: 1px solid green;
 }
 .price {
-  border: 1px solid brown;
   width: 20%;
   min-width: 80px;
 }
 .coin_price {
-  border: 1px solid yellow;
   float: right;
 }
 .coin_high {
-  border: 1px solid blue;
-  width: 20%;
+  overflow: visible;
+  object-fit: contain;
   min-width: 100px;
   align-items: center;
 }
@@ -90,19 +82,35 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border: 1px solid aqua;
   gap: 0.5rem;
 }
 .change {
   width: 20%;
   min-width: 70px;
-  border: 2px solid pink;
 }
 .coin_change {
-  border: 2px solid violet;
   float: right;
 }
-@media only screen and (max-width: 930px) {
+.coin_price,
+.coin_high,
+.coin_low,
+.coin_change,
+.coin_symbol {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 1480px) {
+  .coin_price,
+  .coin_high,
+  .coin_low,
+  .coin_change,
+  .coin_symbol {
+    font-size: 1.3rem;
+  }
+  .img_name > h1 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
   .component {
     flex-direction: column;
   }
@@ -117,9 +125,17 @@
   .component {
     width: 100%;
   }
+  .coin_price,
+  .coin_high,
+  .coin_low,
+  .coin_change,
+  .coin_symbol {
+    font-size: 1rem;
+  }
   .coin_name {
     font-size: 1.2rem !important;
   }
+
   .img_name {
     min-width: 130px;
   }

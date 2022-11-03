@@ -2,24 +2,34 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import SingleCurrencyComponent from "./SingleCurrencyComponent";
 import axios from "axios";
-
-/*https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=80&page=1&sparkline=false*/
+import LoadingSpinner from "./LoadingSpinner";
 
 function App() {
   const [coins, setCoins] = useState([]);
   const [query, setQuery] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=80&page=1&sparkline=false"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
       )
-      .then((res) => setCoins(res.data))
-      .catch((err) => console.log(err));
-    console.log(coins);
+      .then((res) => {
+        setCoins(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        console.log(err);
+        setIsLoading(false);
+      });
   }, []);
 
-  const queryCoins = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(query.toLowerCase())
+  const queryCoins = coins.filter(
+    (coin) =>
+      coin.name.toLowerCase().includes(query.toLowerCase()) ||
+      coin.symbol.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
@@ -41,22 +51,37 @@ function App() {
         </form>
       </div>
       <div className="results_component">
-        {queryCoins.map((coin, index) => {
-          if (index > 10) return;
-          else
-            return (
-              <SingleCurrencyComponent
-                key={coin.id}
-                image={coin.image}
-                name={coin.name}
-                symbol={coin.symbol}
-                price={coin.current_price}
-                high={coin.high_24h}
-                low={coin.low_24h}
-                change={coin.price_change_percentage_24h}
-              />
-            );
-        })}
+        {!isLoading ? (
+          queryCoins.length < 1 ? (
+            { error }.length > 1 ? (
+              <div className="div">{error}</div>
+            ) : coins.length > 1 ? (
+              <div className="no-results">No results</div>
+            ) : (
+              ""
+            )
+          ) : (
+            queryCoins.map((coin, index) => {
+              if (index > 15) return;
+              else {
+                return (
+                  <SingleCurrencyComponent
+                    key={coin.id}
+                    image={coin.image}
+                    name={coin.name}
+                    symbol={coin.symbol}
+                    price={coin.current_price}
+                    high={coin.high_24h}
+                    low={coin.low_24h}
+                    change={coin.price_change_percentage_24h}
+                  />
+                );
+              }
+            })
+          )
+        ) : (
+          <LoadingSpinner />
+        )}
       </div>
     </div>
   );
