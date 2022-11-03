@@ -57,8 +57,6 @@
 .img_name > h1 {
   font-size: 1.8rem;
 }
-.coin_symbol {
-}
 .price {
   width: 20%;
   min-width: 80px;
@@ -71,10 +69,6 @@
   object-fit: contain;
   min-width: 100px;
   align-items: center;
-}
-.coin_low {
-}
-.coin_change {
 }
 .coin_data {
   flex: 0.48;
