@@ -8,8 +8,10 @@
 
 ![](https://github.com/stefandrazicstefan/Crypto_Price_Checker/blob/master/phone-gif.gif)
 
-Made with
+# Made with
 
 React.js
+
 axios - api data fetch
+
 material ui - icons
