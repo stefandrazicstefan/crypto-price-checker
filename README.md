@@ -1,4 +1,4 @@
-# Simple crypto price checker using coingecko api
+# Fully responsive crypto price checker
 
 ![](https://github.com/stefandrazicstefan/Crypto_Price_Checker/blob/master/ezgif.com-gif-maker.gif)
 
@@ -8,10 +8,10 @@
 
 ![](https://github.com/stefandrazicstefan/Crypto_Price_Checker/blob/master/phone-gif.gif)
 
-# Made with
+# Simple app made with
 
 React.js
 
-axios - api data fetch
+axios - api data fetch from api.coingecko.com
 
 material ui - icons
