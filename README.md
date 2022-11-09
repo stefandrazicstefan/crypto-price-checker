@@ -1,6 +1,7 @@
 # Fully responsive crypto price checker
-
 ![](https://github.com/stefandrazicstefan/Crypto_Price_Checker/blob/master/pc.gif)
+
+[![My Skills](https://skills.thijs.gg/icons?i=react&theme=dark)](https://skills.thijs.gg)
 
 ## Responsive resize
 
