@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Crypto_Price_Checker/static/css/main.9c4bd174.css",
-    "main.js": "/Crypto_Price_Checker/static/js/main.57dffcc9.js",
-    "static/media/Kanit-Medium.woff": "/Crypto_Price_Checker/static/media/Kanit-Medium.702ab73bf8ad756f2584.woff",
-    "static/media/Kanit-Thin.woff": "/Crypto_Price_Checker/static/media/Kanit-Thin.3e24eb12fd9c8b9fcade.woff",
-    "static/media/Kanit-Medium.woff2": "/Crypto_Price_Checker/static/media/Kanit-Medium.8aa183ba235c64948691.woff2",
-    "static/media/Kanit-Thin.woff2": "/Crypto_Price_Checker/static/media/Kanit-Thin.bee485d3ca6b5b5f4643.woff2",
-    "index.html": "/Crypto_Price_Checker/index.html",
-    "main.9c4bd174.css.map": "/Crypto_Price_Checker/static/css/main.9c4bd174.css.map",
-    "main.57dffcc9.js.map": "/Crypto_Price_Checker/static/js/main.57dffcc9.js.map"
+    "main.css": "/crypto-price-checker/static/css/main.9c4bd174.css",
+    "main.js": "/crypto-price-checker/static/js/main.57dffcc9.js",
+    "static/media/Kanit-Medium.woff": "/crypto-price-checker/static/media/Kanit-Medium.702ab73bf8ad756f2584.woff",
+    "static/media/Kanit-Thin.woff": "/crypto-price-checker/static/media/Kanit-Thin.3e24eb12fd9c8b9fcade.woff",
+    "static/media/Kanit-Medium.woff2": "/crypto-price-checker/static/media/Kanit-Medium.8aa183ba235c64948691.woff2",
+    "static/media/Kanit-Thin.woff2": "/crypto-price-checker/static/media/Kanit-Thin.bee485d3ca6b5b5f4643.woff2",
+    "index.html": "/crypto-price-checker/index.html",
+    "main.9c4bd174.css.map": "/crypto-price-checker/static/css/main.9c4bd174.css.map",
+    "main.57dffcc9.js.map": "/crypto-price-checker/static/js/main.57dffcc9.js.map"
   },
   "entrypoints": [
     "static/css/main.9c4bd174.css",
